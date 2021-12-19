@@ -147,3 +147,42 @@ test_main.py .....                                                              
 ================================================== 5 passed in 0.05s ==================================================
 
 ```
+
+## yml файл
+```console
+name: pytesting
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv install --dev
+        pip install pytest
+        pip install pytest-cov
+        pip install pytest-mock
+        pip install pytest-telegram
+    - name: Test with pytest
+      run:
+        pytest --telegram_id=${{ secrets.TELEGRAM_TO }} --telegram_token=${{ secrets.TELEGRAM_TOKEN }}
+
+    - name: Test with pytest
+      run: |
+        pip install pytest
+        pytest
+
+
+
+```
