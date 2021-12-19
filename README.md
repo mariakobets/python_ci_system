@@ -1,6 +1,6 @@
 # Бейдж с результатами тестов
 
-[![Build Status - GitHub](https://github.com/mariakobets/python_ci_system/workflows/pytestingandsending/badge.svg)](https://github.com/mariakobets/python_ci_system/actions/workflows/pythonapp.yml)
+[![Build Status - GitHub](https://github.com/mariakobets/python_ci_system/workflows/pytesting/badge.svg)](https://github.com/mariakobets/python_ci_system/actions/workflows/pythonapp.yml)
 
 # Коды Программы и Тестов
 
