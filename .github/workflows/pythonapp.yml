@@ -20,7 +20,7 @@ jobs:
         pipenv install --dev
         pip install pytest~=5.3
         pip install pytest-cov~=2.8
-        pip istall pytest-mock~=1.13
+        pip install pytest-mock~=1.13
         pip install pytest-telegram
     - name: Test with pytest
       run:
